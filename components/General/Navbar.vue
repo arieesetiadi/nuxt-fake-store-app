@@ -25,7 +25,7 @@
 
           <div
             tabindex="0"
-            class="card dropdown-content card-compact z-[1] mt-3 w-52 bg-base-100 shadow">
+            class="card dropdown-content card-compact z-10 mt-3 w-52 bg-base-100 shadow">
             <div class="card-body">
               <span class="text-lg font-bold">8 Items</span>
               <span>Subtotal: $999</span>
@@ -52,7 +52,7 @@
 
           <ul
             tabindex="0"
-            class="menu dropdown-content menu-sm z-[1] mt-3 w-52 rounded-box bg-base-100 p-2 shadow">
+            class="menu dropdown-content menu-sm z-10 mt-3 w-52 rounded-box bg-base-100 p-2 shadow">
             <li>
               <NuxtLink href="/" class="justify-between">Profile</NuxtLink>
             </li>

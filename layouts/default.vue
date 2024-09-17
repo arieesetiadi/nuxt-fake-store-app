@@ -5,9 +5,7 @@
     <Navbar />
   </header>
 
-  <main class="p-10">
-    <slot />
-  </main>
+  <slot />
 </template>
 
 <style scoped></style>

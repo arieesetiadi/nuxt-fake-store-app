@@ -1,5 +1,10 @@
 <script setup lang="ts"></script>
 
 <template>
-  <h1 class="text-center">Home</h1>
+  <!-- Hero Section -->
+  <main class="p-5">
+    <div class="mx-auto max-w-screen-xl">
+      <Hero />
+    </div>
+  </main>
 </template>
