@@ -1,5 +1,5 @@
 <script setup lang="ts"></script>
 
 <template>
-  <TestComponent />
+  <h1 class="text-center">Home</h1>
 </template>

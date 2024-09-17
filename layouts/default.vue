@@ -1,10 +1,13 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div>
-    Layout: default
+  <header>
+    <Navbar />
+  </header>
+
+  <main class="p-10">
     <slot />
-  </div>
+  </main>
 </template>
 
 <style scoped></style>
