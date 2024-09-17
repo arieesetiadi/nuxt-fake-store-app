@@ -1,5 +1,5 @@
 <script setup lang="ts"></script>
 
 <template>
-  <TestComponent />
+  <button class="btn btn-primary">Primary</button>
 </template>
