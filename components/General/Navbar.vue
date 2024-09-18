@@ -1,8 +1,17 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+  const { y } = useWindowScroll();
+  const isScrolled = ref(false);
+
+  watch(y, () => {
+    isScrolled.value = y.value > 0;
+  });
+</script>
 
 <template>
-  <div class="shadow-sm">
-    <div class="navbar mx-auto max-w-screen-xl bg-base-100">
+  <header class="sticky top-0 z-[100]">
+    <nav
+      class="navbar bg-base-100 transition-all duration-200 ease-in-out xl:px-14"
+      :class="isScrolled ? 'shadow-lg' : 'shadow-sm'">
       <div class="flex-1">
         <NuxtLink href="/" class="flex items-center gap-3">
           <NuxtImg
@@ -65,8 +74,8 @@
           </ul>
         </div>
       </div>
-    </div>
-  </div>
+    </nav>
+  </header>
 </template>
 
 <style scoped></style>
