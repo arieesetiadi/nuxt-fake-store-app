@@ -3,11 +3,11 @@
 </script>
 
 <template>
-  <NuxtLink href="/">
+  <NuxtLink :href="`/products/1`">
     <div
       class="card card-compact bg-base-100 shadow transition-all duration-200 hover:shadow-lg">
       <figure>
-        <img
+        <NuxtImg
           src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
           alt="Shoes" />
       </figure>

@@ -2,16 +2,16 @@
 
 <template>
   <!-- Hero Section -->
-  <main class="p-5">
+  <div class="p-5">
     <div class="mx-auto max-w-screen-xl">
       <Hero />
     </div>
-  </main>
+  </div>
 
   <!-- Product List Section -->
-  <main class="p-5">
+  <div class="p-5">
     <div class="mx-auto max-w-screen-xl">
       <ProductList />
     </div>
-  </main>
+  </div>
 </template>
