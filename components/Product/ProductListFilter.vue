@@ -1,5 +1,5 @@
 <script setup lang="ts">
-  //
+  const sort = defineModel("sort");
 </script>
 
 <template>
@@ -12,7 +12,7 @@
 
     <div class="flex items-center gap-2">
       <span class="text-sm font-bold">Sort:</span>
-      <select class="select select-sm w-full max-w-xs shadow">
+      <select v-model="sort" class="select select-sm w-full max-w-xs shadow">
         <option value="desc">Latest</option>
         <option value="asc">Oldest</option>
       </select>
