@@ -1,11 +1,15 @@
 <script setup lang="ts">
-  //
+  import type { Product } from "~/lib/types";
+
+  defineProps<{
+    product: Product;
+  }>();
 </script>
 
 <template>
-  <NuxtLink :href="`/products/1`">
+  <NuxtLink :href="`/products/${product.id}`">
     <div
-      class="card card-compact bg-base-100 shadow transition-all duration-200 hover:shadow-lg">
+      class="card card-compact h-full bg-base-100 shadow transition-all duration-200 hover:shadow-lg">
       <figure>
         <NuxtImg
           src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
@@ -15,7 +19,7 @@
       <div class="card-body gap-0">
         <div class="flex gap-2">
           <h2 class="card-title mb-2 flex-1 text-base font-normal">
-            Product Title
+            {{ product.title }}
           </h2>
         </div>
 

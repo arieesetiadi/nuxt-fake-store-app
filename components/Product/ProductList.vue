@@ -1,5 +1,7 @@
 <script setup lang="ts">
-  //
+  import type { Product } from "~/lib/types";
+
+  const { data: products } = useApiFetch<Product[]>("/products");
 </script>
 
 <template>
@@ -8,6 +10,6 @@
   </div>
 
   <div class="grid grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-5 lg:gap-5">
-    <ProductListItem v-for="i in 15" :key="i" />
+    <ProductListItem v-for="product in products" :key="product.id" :product />
   </div>
 </template>
