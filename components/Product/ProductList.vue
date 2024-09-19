@@ -1,17 +1,24 @@
 <script setup lang="ts">
-  import type { Product } from "~/lib/types";
+  import type { Product, ProductSort } from "~/lib/types";
 
-  const sort = ref<"asc" | "desc">("desc");
+  const category = ref<string>("");
+  const sort = ref<ProductSort>("desc");
   const limit = ref<number>(10);
+  const path = computed(() => {
+    const basePath = "/products";
+    return (
+      basePath + (category.value != "" ? `/category/${category.value}` : "")
+    );
+  });
 
-  const { data: products } = useApiFetch<Product[]>("/products", {
+  const { data: products } = useApiFetch<Product[]>(path, {
     query: { sort, limit },
   });
 </script>
 
 <template>
   <div class="mb-10">
-    <ProductListFilter v-model:sort="sort" />
+    <ProductListFilter v-model:category="category" v-model:sort="sort" />
   </div>
 
   <div class="grid grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-5 lg:gap-5">

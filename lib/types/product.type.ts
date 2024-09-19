@@ -1,3 +1,4 @@
+export type ProductSort = "asc" | "desc";
 export type Product = {
   id: number;
   title: string;
