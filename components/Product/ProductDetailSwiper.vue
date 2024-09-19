@@ -1,4 +1,8 @@
 <script setup lang="ts">
+  defineProps<{
+    image: string | undefined;
+  }>();
+
   const thumbsSwiper = ref(null);
 
   const setThumbsSwiper = (swiper: any) => {
@@ -26,11 +30,9 @@
     :pagination="{ dynamicBullets: true }"
     :navigation="true"
     :thumbs="{ swiper: thumbsSwiper }"
-    class="mb-1 rounded-lg">
+    class="mb-1 h-[400px] rounded-lg">
     <SwiperSlide v-for="i in 5" :key="i">
-      <NuxtImg
-        src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-        class="w-full" />
+      <NuxtImg :src="image" class="h-full w-full object-contain p-10" />
     </SwiperSlide>
   </Swiper>
 
@@ -44,16 +46,14 @@
       SwiperThumbs,
       SwiperFreeMode,
     ]"
-    :slides-per-view="3"
+    :slides-per-view="4"
     :loop="true"
     :freeMode="true"
     :effect="'creative'"
     :watchSlidesProgress="true"
     class="flex gap-2 rounded-lg">
     <SwiperSlide v-for="i in 5" :key="i">
-      <NuxtImg
-        src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-        class="w-full" />
+      <NuxtImg :src="image" class="w-full" />
     </SwiperSlide>
   </Swiper>
 </template>
